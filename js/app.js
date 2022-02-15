@@ -12,7 +12,7 @@
 // }
 
 
-let count = 0;
+/* let count = 0;
 
 document.getElementById('add').addEventListener('click', function (e) {
     count = count + 1;
@@ -23,8 +23,21 @@ document.getElementById('minus').addEventListener('click', function () {
     if (count > 0)
         count = count - 1;
     control('count');
-})
+}) */
 
+
+let count = 0;
+
+function add(e) {
+    count++;
+    control('count');
+}
+
+function minus(paramas) {
+    if (count > 0)
+        count--;
+    control('count');
+}
 
 function control(id) {
     document.getElementById(id).innerText = count;
